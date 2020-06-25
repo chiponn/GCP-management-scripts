@@ -18,12 +18,12 @@ export GCE_PROJECT=
 					echo -e "$(date -u)  ${INSTANCE} has immunity. Won't be deleted \n"
 #					sleep 10
 				else
-					echo -e "$(date -u)  Deleting ${INSTANCE} in support-prod-157422 \n"
+					echo -e "$(date -u)  Deleting ${INSTANCE} \n"
 					`/snap/bin/gcloud compute instances delete ${INSTANCE} --project ${GCE_PROJECT} --zone ${ZONE} --quiet`
 #					sleep 30
 				fi
 		else
-            			echo -e "$(date -u)  Not Deleting ${INSTANCE} in support-prod-157422 \n"
+            			echo -e "$(date -u)  Not Deleting ${INSTANCE}\n"
 #				sleep 10
 		fi
 done
