@@ -1,0 +1,1 @@
+#List of clusters that should be up and running all time. GCP script will not turn them off

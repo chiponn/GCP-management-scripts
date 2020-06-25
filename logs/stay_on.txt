@@ -1,0 +1,14 @@
+#List of instances that should be up and running all time. GCP script will not turn them off
+## ONLY L3 or Yonatan Brand are allowed to edit this file ## 
+
+#daily-basis
+
+
+
+
+
+
+
+
+#one-time instances
+

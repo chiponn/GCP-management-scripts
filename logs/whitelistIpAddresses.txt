@@ -1,0 +1,3 @@
+## List of external IP addresses that should not be deleted even if they are unused
+## ONLY L3 or Yonatan Brand are allowed to edit this file ##
+
