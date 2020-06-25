@@ -3,7 +3,7 @@
 # Script designed to delete external ip addresses that are not in use.          |         Designed by Yonatan Brand
 ###################################################################################################################
 
-export GCE_PROJECT=support-prod-157422
+export GCE_PROJECT=
 
 #############################################################
 
