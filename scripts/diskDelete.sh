@@ -3,7 +3,7 @@
 # Script designed to delete disks that are not uses by K8S Cluster.          |         Designed by Yonatan Brand
 ##############################################################################################################################
 
-export GCE_PROJECT=support-prod-157422
+export GCE_PROJECT=
 
 #############################################################
 
