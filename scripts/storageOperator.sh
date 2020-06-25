@@ -3,7 +3,7 @@
 # Script designed to delete all instances that were not used in the last 20 days.          |         Designed by Yonatan Brand
 ##############################################################################################################################
 
-export GCE_PROJECT=support-prod-157422
+export GCE_PROJECT=
 
 #############################################################
 
