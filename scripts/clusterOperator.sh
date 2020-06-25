@@ -3,7 +3,7 @@
 # Script designed to resize all Kubernates clusters in a GCP project to 0 to prevent high expernses. |         Designed by Yonatan Brand
 #########################################################################################################################################
 
-export GCE_PROJECT=support-prod-157422
+export GCE_PROJECT=
 
 #############################################################
 
@@ -12,7 +12,7 @@ export GCE_PROJECT=support-prod-157422
 			echo -e "${CLUSTER} wont be powered off\n"
 		else 
 			ZONE=`/snap/bin/gcloud container clusters list | grep -E "^${CLUSTER} " | awk '{print $2}'`
-			echo "$(date -u)  Resizing ${CLUSTER} ${ZONE}  in support-prod-157422"
+			echo "$(date -u)  Resizing ${CLUSTER} ${ZONE}"
 			/snap/bin/gcloud container clusters resize ${CLUSTER} --project ${GCE_PROJECT} --zone ${ZONE} --size=0 --quiet >> /home/yonatanb/gcpOperator/logs/kubernetes.txt
 		fi
 done
