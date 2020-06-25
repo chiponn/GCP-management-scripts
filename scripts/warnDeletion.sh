@@ -4,7 +4,7 @@
 ##############################################################################################################################
 
 export GCE_PROJECT=support-prod-157422
-
+export WEBHOOK_URL=
 #############################################################
 
         for INSTANCE in `/snap/bin/gcloud compute instances list --project ${GCE_PROJECT} --filter="Status:Terminated" | awk '{ print $1 }' | sed -e "1d"`;do
@@ -20,7 +20,7 @@ export GCE_PROJECT=support-prod-157422
 					echo -e "$(date -u) sending ${INSTANCE} Sheriff warning.\n"
                                         USER=`/snap/bin/gcloud logging read "resource.type=gce_instance AND jsonPayload.event_subtype=compute.instances.insert AND ${INSTANCE}" --freshness="1000d" --limit=1 --format json | jq ".[] | .jsonPayload .actor .user"`
                                         LASTSD=`/snap/bin/gcloud logging read "resource.type=gce_instance AND jsonPayload.event_subtype=compute.instances.stop AND ${INSTANCE}" --freshness "20d" --limit 1 --format json | jq ".[] | .timestamp"`
-                                        curl -d "{\"user\":${USER},\"instance\":\"${INSTANCE}\",\"time\": ${LASTSD}}" "https://hooks.zapier.com/hooks/catch/5175874/oy3huvp/"
+                                        curl -d "{\"user\":${USER},\"instance\":\"${INSTANCE}\",\"time\": ${LASTSD}}" "${WEBHOOK_URL}"
 
                                 fi
                 fi
