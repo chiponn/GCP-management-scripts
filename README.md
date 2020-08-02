@@ -16,7 +16,8 @@ logs - Contains the output from each script and also contains text files that he
 
 # How to use? 
 1. As all scripts are used by gcloud client, please download and install first from here - https://cloud.google.com/sdk/install.
-2. Place both directories under the same path. 
-3. Add to crontab when would you like the script run. A crontab example can be found in the project's root directory. 
+2. As some scripts use "jq", make sure to install the jq client. 
+3. Place both directories under the same path. 
+4. Add to crontab when would you like the script run. A crontab example can be found in the project's root directory. 
 * If you use it, please make sure to change the path accordingly.
 ** You can open crontab with "$ crontabe -e" command and simply past the content inside.
